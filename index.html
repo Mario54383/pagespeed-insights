@@ -5,8 +5,6 @@
         <link rel="icon" type="image.png" href="imagenes/favicon.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
         <i class="icon-menu burger_button" id="burger_menu"></i>
@@ -149,6 +147,8 @@
                 </div>
             </div>
         </footer>
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="estilos.css">
         <script>
             const ipad = window.matchMedia('screen and (max-width: 767px)')
             const menu = document.querySelector('.menu');
@@ -157,7 +157,7 @@
 
             ipad.addListener(validation)
 
-            function validation(event) {
+            const validation = event => {
             
              if (event.matches) {
                 burgerButton.addEventListener('click', showHide)
@@ -169,7 +169,7 @@
 
             validation(ipad);
 
-            function showHide() {
+            const showHide = () => {
             if (menu.classList.contains('is_active')) {
                 menu.classList.remove('is_active');
             } else {

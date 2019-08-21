@@ -189,6 +189,7 @@ h1{
   letter-spacing: -.2px;
   margin: 0px;
   color: white;
+  max-width: 500px;
   /*text-transform: uppercase;
   text-decoration: underline;*/
 }
